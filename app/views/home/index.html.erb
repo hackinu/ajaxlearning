@@ -6,8 +6,10 @@
 </form>
 <div id="body">
     <% @comments.each do |c| %>
-        <%= c.body%>
+    <div>
+        <%= c.body%> : <a href="/home/delete/<%= c.id %>" data-remote="true">삭제</a>
         <hr>
+    </div>
     <% end %>
 
 </div>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
   post 'home/create'
   get 'home/index'
+  get 'home/delete/:id' => "home#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
