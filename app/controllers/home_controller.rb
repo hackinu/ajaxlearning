@@ -4,8 +4,12 @@ class HomeController < ApplicationController
   end
   def create
     @comment = Comment.new(body: params[:body])
-    @comment.save
-    redirect_to :back
+    
+    if @comment.save
+      respond_to do |format|
+        format.js #응답을 js로 하겠다.
+      end
+    end
   end
 
 end
