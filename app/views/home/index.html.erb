@@ -8,7 +8,11 @@
     <% @comments.each do |c| %>
         <%= c.body%>
         <hr>
+            <form action="/home/destroy" method="POST" data-remote="true">
+    <input type="submit">
     <% end %>
+
 </div>
 
+</form>
 </center>
